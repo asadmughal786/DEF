@@ -18,10 +18,10 @@ from django.urls import path
 from api import views
 
 '''This will work with Function base view'''
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('studentapi/',views.studentAPI),
-]
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('studentapi/',views.studentAPI),
+# ]
 
 '''This is will work if you have written class base view'''
 
@@ -29,3 +29,6 @@ urlpatterns=[
     path('admin',admin.site.urls),
     path('studentapi/',views.Studentapi.as_view()),
 ]
+
+
+
