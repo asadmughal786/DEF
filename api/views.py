@@ -24,7 +24,7 @@ class Studentapi(View):
             json_data = JSONRenderer().render(serializer.data)
             return HttpResponse(json_data,content_type='application/json')
         stu = Student.objects.all()
-        serializer = StudentsSerializer(stu, many=True)
+        serializer = StudentsSerializer(stu, many=True) # many = true is used to tell that this query has many objects to convert. 
         json_data = JSONRenderer().render(serializer.data)
         return HttpResponse(json_data,content_type='application/json')
 
